@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .momentum-scroll {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Enable smooth scrolling but prevent pull-to-refresh */
+html, body {
+  overscroll-behavior-y: none;
+  touch-action: pan-x pan-y;
+  -webkit-overflow-scrolling: touch;
+}
